@@ -1,8 +1,21 @@
-# salledelavage
+# Yo
+## I'm having fun 
 
+Welcome to my Github profile page, *surely*, you are lost.
 
-![Salledelavage's GitHub stats](https://github-readme-stats.vercel.app/api?username=grosheth&show_icons=true&theme=dracula&rank_icon=percentile)
+## My favorite projects
 
+I love programming, I'm almost average at it.
+1. [Python projects](https://en.wikipedia.org/wiki/Pythonidae)
+2. [PyFyLib (spotify/python)](https://github.com/grosheth/stepbot)
 
+## Checkout my dope Github stats
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=grosheth&theme=dracula&layout=pie)](https://github.com/grosheth/github-readme-stats)
+One day i'll be a
+
+![10X engineer](https://github-readme-stats.vercel.app/api?username=grosheth&show_icons=true&theme=dracula&rank_icon=percentile)
+
+## Woah check those mad programming skills
+
+[![Lot of snake dev](https://github-readme-stats.vercel.app/api/top-langs/?username=grosheth&theme=dracula&layout=pie)](https://github.com/grosheth/github-readme-stats)
+
