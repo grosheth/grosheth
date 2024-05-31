@@ -7,13 +7,15 @@ Welcome to my Github profile page, *surely*, you are lost.
 
 I love programming, I'm almost average at it.
 1. [Python projects](https://en.wikipedia.org/wiki/Pythonidae)
-2. [PyFyLib (spotify/python)](https://github.com/grosheth/stepbot)
+2. [StepBot (discord bot)](https://github.com/grosheth/stepbot)
 
 ## Insane Github stats
 
 One day i'll be a
 
-![10X engineer!](https://github-readme-stats.vercel.app/api?username=grosheth&show_icons=true&theme=dracula&rank_icon=percentile)
+<!-- ![10X engineer!](https://github-readme-stats.vercel.app/api?username=grosheth&show_icons=true&theme=dracula&rank_icon=percentile) -->
+
+![10X engineer!](localhost:9000/api?username=grosheth&show_icons=true&theme=dracula&rank_icon=percentile)
 
 ## Woah check out those mad programming skills
 
