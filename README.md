@@ -13,9 +13,7 @@ I love programming, I'm almost average at it.
 
 One day i'll be a
 
-<!-- ![10X engineer!](https://github-readme-stats.vercel.app/api?username=grosheth&show_icons=true&theme=dracula&rank_icon=percentile) -->
-
-![10X engineer!](http://localhost:9000/api?username=grosheth&show_icons=true&theme=dracula&rank_icon=percentile)
+![10X engineer!](https://github-readme-stats.vercel.app/api?username=grosheth&show_icons=true&theme=dracula&rank_icon=percentile)
 
 ## Woah check out those mad programming skills
 
