@@ -18,7 +18,7 @@ I love programming, I'm almost average at it.
 This only checks the public stuff, like all the best stuff is private and stuff you know. I definitely am not only a Python dev or whatever you know. 
 I know Rust is a language.
 
-[![Lot of snake dev](https://github-readme-stats-grosheths-projects.vercel.app/api/top-langs/?username=grosheth&theme=dracula&layout=&hide=Cython)](https://github.com/grosheth/github-readme-stats)
+[![Lot of snake dev](https://github-readme-stats-grosheths-projects.vercel.app/api/top-langs/?username=grosheth&theme=dracula&layout=donut&hide=Cython)](https://github.com/grosheth/github-readme-stats)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&hide=javascript,html)
 
 
