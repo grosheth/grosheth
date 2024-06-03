@@ -15,7 +15,7 @@ I love programming, I'm almost average at it.
 
 ## Woah check out those mad programming skills
 
-This only checks the public stuff, like all the best stuff is private and stuff you know. I definitely am not only a Python dev or whatever you know. 
+Had to exclude some repos where I included some libraries cuz I mean I don't actually write that much code and it was like 99% Python, which is okay, but I definitely am not only a Python dev or whatever or a dev at all in fact you know. 
 I know Rust is a language.
 
 [![Lot of snake dev](https://github-readme-stats-grosheths-projects.vercel.app/api/top-langs/?username=grosheth&theme=dracula&exclude_repo=nixos-configs,pool,github-readme-stats,PyFyLib-API&hide=Cython&langs_count=10)](https://github.com/grosheth/github-readme-stats)
