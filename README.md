@@ -22,5 +22,4 @@ I know Rust is a language.
 
 [![Lot of snake dev](https://github-readme-stats-grosheths-projects.vercel.app/api/top-langs/?username=grosheth&theme=dracula&exclude_repo=nixos-configs,github-readme-stats&hide=Cython&langs_count=11)](https://github.com/grosheth/github-readme-stats)
 
-
-This is mostly sarcasm.
+This is sarcasm.
