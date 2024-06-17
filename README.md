@@ -18,6 +18,6 @@ I love programming, I'm almost average at it.
 Had to exclude some repos where I included some libraries cuz I mean I don't actually write that much code and it was like 99% Python, which is okay, but I definitely am not only a Python dev or whatever or a dev at all in fact you know. 
 I know Rust is a language.
 
-[![Lot of snake dev](https://github-readme-stats-grosheths-projects.vercel.app/api/top-langs/?username=grosheth&theme=dracula&exclude_repo=nixos-configs&hide=Cython&langs_count=11)](https://github.com/grosheth/github-readme-stats)
+[![Lot of snake dev](https://github-readme-stats-grosheths-projects.vercel.app/api/top-langs/?username=grosheth&theme=dracula&exclude_repo=nixos-configs,github-readme-stats&hide=Cython&langs_count=11)](https://github.com/grosheth/github-readme-stats)
 
 This is sarcasm.
