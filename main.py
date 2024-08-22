@@ -10,11 +10,11 @@ def get_credentials():
     token = os.getenv("TOKEN")
     return username, token
 
-def login():
-    username, token = get_credentials()
-    login = requests.get('https://api.github.com/search/repositories?q=github+api', auth=(username,token))
-    return login
-
+def total():
+    total = 0
+    for lang in LANGS:
+        total += LANGS[lang] 
+    return total
 
 def get_langs():
 
@@ -23,7 +23,13 @@ def get_langs():
 
     for repo in json.loads(repositories.text):
         language = requests.get(f"https://api.github.com/repos/grosheth/{repo['name']}/languages", auth=(username,token))
-        print(json.loads(language.text))
+        values = json.loads(language.text)
+        for lang in LANGS:
+            if lang in json.loads(language.text):
+                LANGS[lang] += values[lang]
+
+    total = total()
+    print(total)
 
 
 get_langs()
