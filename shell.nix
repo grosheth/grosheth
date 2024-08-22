@@ -5,6 +5,8 @@ in pkgs.mkShell {
     (pkgs.python311.withPackages (python-pkgs: [
       python-pkgs.python-dotenv
       python-pkgs.requests
+      python-pkgs.jinja2
+      python-pkgs.jinja-markdown
     ]))
   ];
 }
