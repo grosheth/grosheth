@@ -35,9 +35,9 @@ def generate_readme():
 
     with open('README.j2', 'r') as file:
       template = Template(file.read(),trim_blocks=True)
-    rendered_file = template.render(langs_stats=LANGS)
+    rendered_file = template.render(langs=LANGS)
 
-    
+    print(rendered_file)
     output_file = codecs.open("README.md", "w", "utf-8")
     output_file.write(rendered_file)
     output_file.close()

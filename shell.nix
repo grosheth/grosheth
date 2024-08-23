@@ -6,7 +6,6 @@ in pkgs.mkShell {
       python-pkgs.python-dotenv
       python-pkgs.requests
       python-pkgs.jinja2
-      python-pkgs.jinja-markdown
     ]))
   ];
 }
