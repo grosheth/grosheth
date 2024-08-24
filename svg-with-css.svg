@@ -68,8 +68,11 @@
 				}
 			</style>
 			<div class="container">
-				<h1>Bienvenue dans la<br/>SalleDeLavage</h1>
+				<h1>Insane Github Stats<br/>WOW!!!</h1>
 			</div>
+			<svg>
+			  <image href="./assets/images/pie.png" x="x-coordinate" y="y-coordinate" width="width" height="height" />
+			</svg>
 		</div>
 	</foreignObject>
 </svg>
