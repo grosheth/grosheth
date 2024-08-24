@@ -1,2 +1,5 @@
 ## Insane Github stats
-![Repository Languages](pie.png)
+---
+![Repository Languages](./assets/images/pie.png)
+
+

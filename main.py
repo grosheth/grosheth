@@ -34,7 +34,7 @@ def get_langs():
 
 
 def generate_graph():
-    # font_manager.fontManager.addfont("./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf")
+    font_manager.fontManager.addfont("./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf")
     labels = []
     percentages = []
     for lang in LANGS:
@@ -42,8 +42,9 @@ def generate_graph():
         percentages.append(LANGS[lang][1])
     
     fig, ax = plt.subplots()
-    ax.pie(percentages, labels=labels, autopct='%1.1f%%')
+    ax.pie(percentages, labels=labels, autopct='%1.1f%%', labeldistance=0.9, radius=2, startangle=15)
     plt.savefig('assets/images/pie.png', transparent=True)
+    plt.show()
 
 def generate_readme():
 
