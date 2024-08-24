@@ -1,9 +1,8 @@
-## My README
+# Salledelavage
 ---
-
 <div align="center">
   <br/>
-    <img alt="Bienvenue dans la Salledelavage" height="400" src="svg-with-css.svg" width="800" />
+    <img alt="Bienvenue dans la Salledelavage" height="350" src="svg-with-css.svg" width="800" />
   <br/>
 </div>
 
