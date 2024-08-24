@@ -2,9 +2,10 @@ import requests
 import dotenv, os, json
 from jinja2 import Template
 import codecs
+import matplotlib.pyplot as plt
 
-
-LANGS = {"Python": [0, 0],"Nix": [0, 0],"HTML": [0, 0], "Go": [0, 0], "Lua": [0, 0], "JavaScript": [0, 0], "Shell": [0, 0], "Dockerfile": [0, 0]}
+# Cherry picking languages instead of getting 0.001% for Dockerfile...
+LANGS = {"Python": [0, 0],"Nix": [0, 0],"HTML": [0, 0], "Go": [0, 0], "Lua": [0, 0], "JavaScript": [0, 0], "Shell": [0, 0]}
 
 def get_credentials():
     dotenv.load_dotenv()
@@ -29,7 +30,17 @@ def get_langs():
         total += LANGS[lang][0] 
     for lang in LANGS:
         LANGS[lang][1] = 100 * float(LANGS[lang][0]) / float(total)
-    print(LANGS)
+
+def generate_graph():
+    labels = []
+    percentages = []
+    for lang in LANGS:
+        labels.append(lang)
+        percentages.append(LANGS[lang][1])
+
+    fig, ax = plt.subplots()
+    ax.pie(percentages, labels=labels, autopct='%1.1f%%')
+    plt.savefig('pie.png')
 
 def generate_readme():
 
@@ -44,10 +55,6 @@ def generate_readme():
 
 
 get_langs()
+generate_graph()
 generate_readme()
 
-
-    # build a dictionnary with values and sum values
-    # Then build graph
-
-# Make a graph of percentage per repo
