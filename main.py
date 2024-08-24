@@ -41,9 +41,11 @@ def generate_graph():
     for lang in LANGS:
         labels.append(lang)
         percentages.append(LANGS[lang][1])
-    
+    labels = [f'{l}, {s:0.1f}%' for l, s in zip(labels, percentages)]
+    # USE FONTS
     fig, ax = plt.subplots()
-    ax.pie(percentages, colors=colors, labels=labels, autopct='%1.1f%%', labeldistance=0.8, radius=1.5, startangle=15)
+    ax.pie(percentages, colors=colors, labels=labels, labeldistance=None, radius=1.5, startangle=75)
+    ax.legend()
     plt.savefig('assets/images/pie.png', transparent=True)
     plt.show()
 
