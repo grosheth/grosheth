@@ -33,15 +33,15 @@
 					}
 				}
 				.container {
-					font-family: 'JetBrainsMonoNerdFonts-Regular'
+					font-family: 'JetBrainsMonoNerdFonts-Regular';
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					justify-content: center;
+					/*justify-content: center;*/
 					margin: 0;
 					width: 100%;
 					height: 400px;
-					background: linear-gradient(-45deg, #6FB593, #DBAC66, #CD5C60);
+					background: linear-gradient(-45deg, #6FB593, #DBAC66, #eed891);
 					background-size: 600% 400%;
 					animation: gradientBackground 10s ease infinite;
 					border-radius: 10px;
@@ -66,13 +66,15 @@
 					text-shadow: 0 1px 0 #efefef;
 					animation: 5s ease 0s normal forwards 1 fadeIn;
 				}
+				img {
+					animation: 5s ease 0s normal forwards 1 fadeIn;
+				}
 			</style>
 			<div class="container">
 				<h1>Insane Github Stats<br/>WOW!!!</h1>
+				<image href="https://github.com/grosheth/grosheth/blob/main/assets/images/pie.png" height="400" width="800" />
+				<p>This is text in the box. Much wow</p>
 			</div>
-			<svg>
-			  <image href="./assets/images/pie.png" x="x-coordinate" y="y-coordinate" width="width" height="height" />
-			</svg>
 		</div>
 	</foreignObject>
 </svg>
