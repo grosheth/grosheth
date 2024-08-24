@@ -3,6 +3,7 @@ import dotenv, os, json
 from jinja2 import Template
 import codecs
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 
 # Cherry picking languages instead of getting 0.001% for Dockerfile...
 LANGS = {"Python": [0, 0],"Nix": [0, 0],"HTML": [0, 0], "Go": [0, 0], "Lua": [0, 0], "JavaScript": [0, 0], "Shell": [0, 0]}
@@ -31,16 +32,18 @@ def get_langs():
     for lang in LANGS:
         LANGS[lang][1] = 100 * float(LANGS[lang][0]) / float(total)
 
+
 def generate_graph():
+    # font_manager.fontManager.addfont("./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf")
     labels = []
     percentages = []
     for lang in LANGS:
         labels.append(lang)
         percentages.append(LANGS[lang][1])
-
+    
     fig, ax = plt.subplots()
     ax.pie(percentages, labels=labels, autopct='%1.1f%%')
-    plt.savefig('pie.png')
+    plt.savefig('assets/images/pie.png', transparent=True)
 
 def generate_readme():
 
