@@ -42,7 +42,7 @@ def generate_langs_graph():
         labels.append(lang)
         percentages.append(LANGS[lang][1])
     labels = [f'{l}, {s:0.1f}%' for l, s in zip(labels, percentages)]
-    # USE FONTS
+ 
     fig, ax = plt.subplots()
     ax.pie(percentages, colors=colors, labels=labels, labeldistance=None, radius=1.5, startangle=75)
     ax.legend()
@@ -61,7 +61,7 @@ def generate_readme():
     output_file.close()
 
 
-get_langs()
-generate_langs_graph()
+# get_langs()
+# generate_langs_graph()
 generate_readme()
 
