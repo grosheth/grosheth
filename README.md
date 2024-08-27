@@ -7,20 +7,17 @@
 > [!Caution]  
 > WIP
 
+
+![carousel](./assets/images/svg-with-css.svg)
+
 <div align="center">
     <img src="assets/images/svg-with-css.svg" height="400" width="800" />
 </div>
 
-![Custom Styles](assets/images/button.svg)
-
 <details>
 <summary>Languages Usage</summary>
 
-<div align="center">
-  <br/>
-    <img src="assets/images/svg-with-css2.svg" height="400" width="800" />
-  <br/>
-</div>
+![carousel](./assets/images/svg-with-css2.svg)
 
 <p> test </p>
 
@@ -32,13 +29,10 @@
 <details>
 <summary>About me</summary>
 
-<div align="center">
-  <br/>
-    <img src="assets/images/svg-with-css3.svg" height="500" width="800" />
-  <br/>
-</div>
+![carousel](./assets/images/svg-with-css3.svg)
 
 </details>
+
 
 
 ## Special Thanks

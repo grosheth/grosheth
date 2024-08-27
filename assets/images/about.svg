@@ -1,26 +1,26 @@
-<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 800 500" width="800" height="500" xmlns="http://www.w3.org/2000/svg">
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>
 				@keyframes rotate {
 					0% {
-						transform: rotate(360deg);
+						transform: rotate(3deg);
 					}
 					100% {
-						transform: rotate(-360deg);
+						transform: rotate(-3deg);
 					}
 				}
-				@keyframes gradientBackground {
-					0% {
-						background-position: 0% 50%;
-					}
-					50% {
-						background-position: 100% 50%;
-					}
-					100% {
-						background-position: 0% 50%;
-					}
-				}
+				/*@keyframes gradientBackground {*/
+				/*	0% {*/
+				/*		background-position: 0% 50%;*/
+				/*	}*/
+				/*	50% {*/
+				/*		background-position: 100% 50%;*/
+				/*	}*/
+				/*	100% {*/
+				/*		background-position: 0% 50%;*/
+				/*	}*/
+				/*}*/
 				@keyframes fadeIn {
 					0% {
 						opacity: 0;
@@ -40,10 +40,10 @@
 					justify-content: center;
 					margin: 0;
 					width: 100%;
-					height: 400px;
-					background: linear-gradient(-45deg, #6FB593, #DBAC66, #eed891);
-					background-size: 600% 400%;
-					animation: gradientBackground 10s ease infinite;
+					height: 500px;
+					/*background: linear-gradient(-45deg, #FFFFFF, #DBAC66, #eed891);*/
+					/*background-size: 600% 400%;*/
+					/*animation: gradientBackground 10s ease infinite;*/
 					border-radius: 10px;
 					color: white;
 					text-align: center;
@@ -68,7 +68,12 @@
 				}
 			</style>
 			<div class="container">
-				<h1>Insane Github Stats<br/>WOW!!!</h1>
+				<h1>About Me</h1>
+				<p>When I was younger, I always had an Nixcuse to not do things.</p>
+				<p>I was scared of Pythons and of people Bashing each other. Luckily my mom always told me to Go and get things done.</p>
+				<p>That stuck with me even when I felt Rusty. My Dad taught me about gun Shells.</p>
+				<p>I once had a friend with very good vision, people called him "C sharp".</p>
+				<p>But I don't C him anymore. Something something Java. That about sum() it up.</p>
 			</div>
 		</div>
 	</foreignObject>

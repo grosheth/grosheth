@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 800 500" width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<style>
@@ -10,16 +10,14 @@
 						transform: rotate(-3deg);
 					}
 				}
-				@keyframes gradientBackground {
-					0% {
-						background-position: 0% 50%;
-					}
-					50% {
-						background-position: 100% 50%;
-					}
-					100% {
-						background-position: 0% 50%;
-					}
+				@keyframes slideIn {
+					  0% {
+					    transform: translateX(100%);
+					  }
+
+					  100% {
+					    transform: translateX(0%);
+					  }
 				}
 				@keyframes fadeIn {
 					0% {
@@ -37,13 +35,12 @@
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					justify-content: center;
 					margin: 0;
 					width: 100%;
-					height: 500px;
-					background: linear-gradient(-45deg, #FFFFFF, #DBAC66, #eed891);
-					background-size: 600% 400%;
-					animation: gradientBackground 10s ease infinite;
+					height: 400px;
+					/*background: linear-gradient(-45deg, #6FB593, #DBAC66, #eed891);*/
+					/*background-size: 600% 400%;*/
+					/*animation: gradientBackground 10s ease infinite;*/
 					border-radius: 10px;
 					color: white;
 					text-align: center;
@@ -59,7 +56,7 @@
 						0 3px 0 #efefef,
 						0 4px 0 #efefef,
 						0 12px 5px rgba(0, 0, 0, 0.1);
-					animation: rotate ease-in-out 7s infinite alternate;
+					animation: 5s ease =s normal forwards 1 slideIn;
 				}
 				p {
 					font-size: 20px;
@@ -68,12 +65,7 @@
 				}
 			</style>
 			<div class="container">
-				<h1>About Me</h1>
-				<p>When I was younger, I always had an Nixcuse to not do things.</p>
-				<p>I was scared of Pythons and of people Bashing each other. Luckily my mom always told me to Go and get things done.</p>
-				<p>That stuck with me even when I felt Rusty. My Dad taught me about gun Shells.</p>
-				<p>I once had a friend with very good vision, people called him "C sharp".</p>
-				<p>But I don't C him anymore. Something something Java. That about sum() it up.</p>
+				<h1>Bienvenue dans la Salledelavage</h1>
 			</div>
 		</div>
 	</foreignObject>
