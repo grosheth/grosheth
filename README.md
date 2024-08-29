@@ -8,20 +8,16 @@
 > WIP
 
 
-![carousel](./assets/images/svg-with-css.svg)
-
-<div align="center">
-    <img src="assets/images/svg-with-css.svg" height="400" width="800" />
-</div>
+![welcome](./assets/images/welcome.svg)
 
 <details>
-<summary>Languages Usage</summary>
+<summary>Languages</summary>
 
-![carousel](./assets/images/svg-with-css2.svg)
+![welcome](./assets/images/welcome.svg)
 
-<p> test </p>
+    <p> test </p>
 
-<img align="right" width="500" height="400" src="./assets/images/pie.png">
+    <img align="right" width="500" height="400" src="./assets/images/pie.png">
 
 </details>
 
@@ -29,7 +25,7 @@
 <details>
 <summary>About me</summary>
 
-![carousel](./assets/images/svg-with-css3.svg)
+![about](./assets/images/about.svg)
 
 </details>
 
