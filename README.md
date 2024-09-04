@@ -11,23 +11,16 @@
 ![welcome](./assets/images/welcome.svg)
 
 <details>
-<summary>Languages</summary>
-
-![welcome](./assets/images/welcome.svg)
-
-    <p> test </p>
-
-    <img align="right" width="500" height="400" src="./assets/images/pie.png">
-
-</details>
-
-
-<details>
 <summary>About me</summary>
 
 ![about](./assets/images/about.svg)
 
+<img align="right" width="500" height="400" src="./assets/images/pie.png">
+
 </details>
+
+
+
 
 
 
