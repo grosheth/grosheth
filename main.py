@@ -24,7 +24,6 @@ def get_langs():
         for lang in LANGS:
             if lang in json.loads(language.text):
                 LANGS[lang][0] += values[lang]
-
     # Obtaining percentages
     total = 0
     for lang in LANGS:
