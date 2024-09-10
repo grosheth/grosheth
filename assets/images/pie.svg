@@ -171,7 +171,7 @@
 				}
 			</style>
 			<div>
-				<input class="pristine" type="checkbox" name="toggle" value="on"></input>
+				<img src="pie.png"></img>
 			</div>
 		</div>
 	</foreignObject>

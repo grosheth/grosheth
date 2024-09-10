@@ -10,17 +10,6 @@
 						transform: rotate(-3deg);
 					}
 				}
-				/*@keyframes gradientBackground {*/
-				/*	0% {*/
-				/*		background-position: 0% 50%;*/
-				/*	}*/
-				/*	50% {*/
-				/*		background-position: 100% 50%;*/
-				/*	}*/
-				/*	100% {*/
-				/*		background-position: 0% 50%;*/
-				/*	}*/
-				/*}*/
 				@keyframes fadeIn {
 					0% {
 						opacity: 0;
@@ -41,9 +30,6 @@
 					margin: 0;
 					width: 100%;
 					height: 500px;
-					/*background: linear-gradient(-45deg, #FFFFFF, #DBAC66, #eed891);*/
-					/*background-size: 600% 400%;*/
-					/*animation: gradientBackground 10s ease infinite;*/
 					border-radius: 10px;
 					color: white;
 					text-align: center;

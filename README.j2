@@ -1,11 +1,10 @@
 # Salledelavage
 ---
 > [!Caution]  
-> Extraordinary skills were required to make this README.
-
+> WIP
 
 > [!Caution]  
-> WIP
+> Extraordinary skills were required to make this README.
 
 
 ![welcome](./assets/images/welcome.svg)
@@ -15,7 +14,7 @@
 
 ![about](./assets/images/about.svg)
 
-<img align="right" width="500" height="400" src="./assets/images/pie.png">
+![about](./assets/images/pie.svg)
 
 </details>
 
