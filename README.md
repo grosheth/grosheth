@@ -4,20 +4,20 @@
 > WIP
 
 > [!Caution]  
-> Extramedium skills were required to make this README.
+> Incredibly medium skills were required to make this README.
 
 
 ![welcome](./assets/images/welcome.svg)
+![test](./assets/images/wip.svg)
 
 <details>
 <summary>About me</summary>
 
 ![about](./assets/images/about.svg)
 
-![about](./assets/images/pie.svg)
+![stats](./assets/images/pie.svg)
 
 </details>
-
 
 
 
