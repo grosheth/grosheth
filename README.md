@@ -4,7 +4,7 @@
 > WIP
 
 > [!Caution]  
-> Extraordinary skills were required to make this README.
+> Extramedium skills were required to make this README.
 
 
 ![welcome](./assets/images/welcome.svg)
@@ -17,6 +17,7 @@
 ![about](./assets/images/pie.svg)
 
 </details>
+
 
 
 
