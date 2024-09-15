@@ -32,7 +32,6 @@ def get_langs():
         LANGS[lang][1] = 100 * float(LANGS[lang][0]) / float(total)
 
 
-
 def generate_langs_graph():
     font_manager.fontManager.addfont("./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf")
     labels = []
