@@ -14,6 +14,7 @@
 <summary>About me</summary>
 
 ![about](./assets/images/about.svg)
+![about](./assets/images/chinese.svg)
 
 ![stats](./assets/images/pie.svg)
 
