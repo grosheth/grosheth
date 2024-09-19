@@ -63,4 +63,3 @@ def generate_readme():
 # get_langs()
 # generate_langs_graph()
 generate_readme()
-
