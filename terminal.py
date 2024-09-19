@@ -1,7 +1,4 @@
-from datetime import datetime
-
 import gifos
-from zoneinfo import ZoneInfo
 
 FONT_FILE_BITMAP = "./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf"
 
