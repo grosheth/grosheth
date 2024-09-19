@@ -31,7 +31,7 @@ def main():
     stats = get_stats()
     stats = string_format(stats)
 
-    t = gifos.Terminal(1800, 1200, 15, 15, FONT_FILE_BITMAP, 15)
+    t = gifos.Terminal(1500, 1200, 15, 15, FONT_FILE_BITMAP, 15)
     t.set_font(FONT_FILE_BITMAP, 16, 0)
     t.toggle_show_cursor(False)
 
