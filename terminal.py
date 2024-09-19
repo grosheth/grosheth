@@ -31,7 +31,7 @@ def main():
     stats = get_stats()
     stats = string_format(stats)
 
-    t = gifos.Terminal(1500, 1200, 15, 15, FONT_FILE_BITMAP, 15)
+    t = gifos.Terminal(1300, 1200, 15, 15, FONT_FILE_BITMAP, 15)
     t.set_font(FONT_FILE_BITMAP, 16, 0)
     t.toggle_show_cursor(False)
 
@@ -56,7 +56,7 @@ def main():
 └──────────────────────────────────────────────────────────────────────────────────────────────────────────┘└───────────────┘
 ┌ Memory ──────────────────────────────────────────────────────────────┐┌ Github Languages ─────────────────────────────────┐
 │100%│                                     ┌──────────────────────────┐││\x1b[36m    Language▲                  usage%(t)           \x1b[0m│
-│    │                                     │RAM: 17%   10.9GiB/62.7GiB│││                                                   │
+│    │                                     │RAM: 15%   10.9GiB/62.7GiB│││                                                   │
 │    │                                     │SWP:  0%   0.0GiB/8.8GiB  │││    {stats.languages_sorted[0][0]}   {stats.languages_sorted[0][1]} %            │
 │    │                                     └──────────────────────────┘││    {stats.languages_sorted[1][0]}   {stats.languages_sorted[1][1]} %            │
 │    │                                                                 ││    {stats.languages_sorted[2][0]}   {stats.languages_sorted[2][1]} %            │
@@ -115,7 +115,7 @@ def main():
 └──────────────────────────────────────────────────────────────────────────────────────────────────────────┘└───────────────┘
 ┌ Memory ──────────────────────────────────────────────────────────────┐┌ Github Languages ─────────────────────────────────┐
 │100%│                                     ┌──────────────────────────┐││\x1b[36m    Language▲                  usage%(t)\x1b[0m           │
-│    │                                     │RAM: 17%   10.9GiB/62.7GiB│││                                                   │
+│    │                                     │RAM: 16%   10.9GiB/62.7GiB│││                                                   │
 │    │                                     │SWP:  0%   0.0GiB/8.8GiB  │││    {stats.languages_sorted[0][0]}   {stats.languages_sorted[0][1]} %            │                         
 │    │                                     └──────────────────────────┘││    {stats.languages_sorted[1][0]}   {stats.languages_sorted[1][1]} %            │
 │    │                                                                 ││    {stats.languages_sorted[2][0]}   {stats.languages_sorted[2][1]} %            │
@@ -214,7 +214,7 @@ def main():
 
     monaLines3 = f"""
 ┌ CPU ─ 1.04 0.71 0.50 ────────────────────────────────────────────────────────────────────────────────────┐┌───────────────┐
-│100%│\x1b[31m            ⢠⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠒⠤⣀               \x1b[0m││\x1b[36mCPU     Use     \x1b[0m│
+│100%│\x1b[31m            ⢠⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠒⠤⣀               \x1b[0m││\x1b[36mCPU     Use    \x1b[0m│
 │    │\x1b[31m           ⢠⠃                                                                         ⠑⠢⢄⡀           \x1b[0m││               │
 │    │\x1b[31m          ⢀⠎                                                                             ⠘⡄          \x1b[0m││All            │
 │    │\x1b[31m         ⢀⠎                                                                               ⠘⡄         \x1b[0m││AVG     3%     │
@@ -271,10 +271,10 @@ def main():
 └─────────────────────────────────────────────────────────────┘└────────────────────────────────────────────────────────────┘
     """
 
-    t.gen_text(monaLines0, 10, count=25)
-    t.gen_text(monaLines1, 10, count=25)
-    t.gen_text(monaLines2, 10, count=25)
-    t.gen_text(monaLines3, 10, count=25)
+    t.gen_text(monaLines0, 10, count=30)
+    t.gen_text(monaLines1, 10, count=30)
+    t.gen_text(monaLines2, 10, count=30)
+    t.gen_text(monaLines3, 10, count=30)
 
     # t.toggle_show_cursor(True)
 
