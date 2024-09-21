@@ -8,13 +8,13 @@ def get_stats():
 
     return git_user_details
 
-
 def string_format(stats):
     for x, lang in enumerate(stats.languages_sorted):
         stats.languages_sorted[x] = list(stats.languages_sorted[x])
         stats.languages_sorted[x][0] = "{:<25}".format(lang[0])
         stats.languages_sorted[x][1] = "{:<5}".format(lang[1])
- 
+
+    # Set length of strings so that btm stays the same size even when stats change
     stats.account_name = "{:<16}".format(stats.account_name) 
     stats.total_commits_all_time = "{:<10}".format(stats.total_commits_all_time)
     stats.total_pull_requests_made = "{:<6}".format(stats.total_pull_requests_made)
@@ -25,10 +25,15 @@ def string_format(stats):
     return stats
 
 def main():
+    # Initialize Terminal
+    t = gifos.Terminal(1300, 1200, 15, 15, FONT_FILE_BITMAP, 15)
+
+    # Obtain stats from Github
     stats = get_stats()
     stats = string_format(stats)
 
-    t = gifos.Terminal(1300, 1200, 15, 15, FONT_FILE_BITMAP, 15)
+    t.gen_text(text="\x1b[37m\x1b[0m \x1b[31mnixos\x1b[0m \x1b[33msalledelavage\x1b[0m \x1b[32m ~\x1b[0m ............................ \x1b[35m12ms\x1b[0m \x1b[34m󰔟 09-20 10:36\x1b\n\x1b[32m❯\x1b[0m", row_num=10, contin=False)
+
     t.set_font(FONT_FILE_BITMAP, 16, 0)
     t.toggle_show_cursor(False)
 
@@ -268,11 +273,13 @@ def main():
 └─────────────────────────────────────────────────────────────┘└────────────────────────────────────────────────────────────┘
     """
 
-    t.gen_text(monaLines0, 10, count=30)
-    t.gen_text(monaLines1, 10, count=30)
-    t.gen_text(monaLines2, 10, count=30)
-    t.gen_text(monaLines3, 10, count=30)
-
+    # Loop over Bottom command
+    # for x in range(10):
+    #     t.gen_text(monaLines0, 10, count=30)
+    #     t.gen_text(monaLines1, 10, count=30)
+    #     t.gen_text(monaLines2, 10, count=30)
+    #     t.gen_text(monaLines3, 10, count=30)
+    #
     # t.toggle_show_cursor(True)
 
     t.gen_gif()
