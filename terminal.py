@@ -1,6 +1,33 @@
 import gifos
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 FONT_FILE_BITMAP = "./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf"
+
+nitch = f"""
+\x1b[36m
+   _  ___      ____  ____
+  / |/ (_)_ __/ __ \/ __/
+ /    / /\ \ / /_/ /\ \ 
+/_/|_/_//_\_\\\\____/___/ 
+\x1b[0m
+  ╭───────────╮
+  │ \x1b[31m\x1b[0m  user   │ \x1b[31msalledelavage\x1b[0m
+  │ \x1b[33m\x1b[0m  hname  │ \x1b[33mnixos\x1b[0m
+  │ \x1b[32m󰻀\x1b[0m  distro │ \x1b[32mNixOS 24.11 (Vicuna)\x1b[0m
+  │ \x1b[36m󰌢\x1b[0m  kernel │ \x1b[36m6.6.48\x1b[0m
+  │ \x1b[34m\x1b[0m  uptime │ \x1b[34m20 sumtin\x1b[0m
+  │ \x1b[35m\x1b[0m  shell  │ \x1b[35mzsh\x1b[0m
+  │ \x1b[31m󰏖\x1b[0m  pkgs   │ \x1b[31m2229\x1b[0m
+  │ \x1b[33m󰍛\x1b[0m  memory │ \x1b[33m4506 | 64174 MiB\x1b[0m
+  ├───────────┤
+  │ 󰏘  colors │  \x1b[31m  \x1b[0m\x1b[32m  \x1b[0m\x1b[33m  \x1b[0m\x1b[34m  \x1b[0m\x1b[35m  \x1b[0m\x1b[36m  \x1b[0m\x1b[37m  \x1b[0m
+  ╰───────────╯
+    """
+
+
+# Initialize Terminal
+t = gifos.Terminal(1300, 1200, 15, 15, FONT_FILE_BITMAP, 15)
 
 def get_stats():
     ignore_repos = ['github-readme-stats', 'nixos-configs', 'pool']
@@ -12,6 +39,7 @@ def string_format(stats):
     for x, lang in enumerate(stats.languages_sorted):
         stats.languages_sorted[x] = list(stats.languages_sorted[x])
         stats.languages_sorted[x][0] = "{:<25}".format(lang[0])
+        stats.languages_sorted[x][1] = str(stats.languages_sorted[x][1]) + "%"
         stats.languages_sorted[x][1] = "{:<5}".format(lang[1])
 
     # Set length of strings so that btm stays the same size even when stats change
@@ -24,20 +52,33 @@ def string_format(stats):
 
     return stats
 
-def main():
-    # Initialize Terminal
-    t = gifos.Terminal(1300, 1200, 15, 15, FONT_FILE_BITMAP, 15)
+def shell(row, delay=0, contin=False, save=True):
+    time_now = datetime.now(ZoneInfo("America/Toronto")).strftime(
+        "%a %b %d %I:%M:%S %Y"
+    )
+    t.gen_text(text=nitch, row_num=1, contin=False)
+    t.gen_text(text=f"\x1b[37m \x1b[0m \x1b[31mnixos\x1b[0m \x1b[33msalledelavage\x1b[0m \x1b[32m ~\x1b[0m ................................................................... \x1b[35m12ms\x1b[0m \x1b[34m󰔟 {time_now}\x1b[0m", row_num=20, contin=False)
+    t.gen_text(text=f"\x1b[32m❯ \x1b[0m", row_num=21, contin=False)
+    t.clone_frame(20)
+    if save:
+        t.save_frame(base_file_name=f"frame_{row}")
 
+def main():
+
+    t.set_font(FONT_FILE_BITMAP, 16)
     # Obtain stats from Github
     stats = get_stats()
     stats = string_format(stats)
 
-    # t.gen_text(text="\x1b[37m\x1b[0m \x1b[31mnixos\x1b[0m \x1b[33msalledelavage\x1b[0m \x1b[32m ~\x1b[0m ............................ \x1b[35m12ms\x1b[0m \x1b[34m󰔟 09-20 10:36\x1b\n\x1b[32m❯\x1b[0m", row_num=10, contin=False)
+
+    shell(1)
+    t.gen_typing_text("btm", 21, contin=True)
+    t.clear_frame()
 
     t.set_font(FONT_FILE_BITMAP, 16, 0)
     t.toggle_show_cursor(False)
 
-    monaLines0 = f"""
+    bottom0 = f"""
 ┌ CPU ─ 1.04 0.71 0.50 ────────────────────────────────────────────────────────────────────────────────────┐┌───────────────┐
 │100%│                                                                                                     ││\x1b[36mCPU     Use    \x1b[0m│
 │    │                                                                                                     ││               │
@@ -59,12 +100,12 @@ def main():
 ┌ Memory ──────────────────────────────────────────────────────────────┐┌ Github Languages ─────────────────────────────────┐
 │100%│                                     ┌──────────────────────────┐││\x1b[36m    Language▲                  usage%(t)           \x1b[0m│
 │    │                                     │RAM: 15%   10.9GiB/62.7GiB│││                                                   │
-│    │                                     │SWP:  0%   0.0GiB/8.8GiB  │││    {stats.languages_sorted[0][0]}   {stats.languages_sorted[0][1]} %            │
-│    │                                     └──────────────────────────┘││    {stats.languages_sorted[1][0]}   {stats.languages_sorted[1][1]} %            │
-│    │                                                                 ││    {stats.languages_sorted[2][0]}   {stats.languages_sorted[2][1]} %            │
-│    │                                                                 ││    {stats.languages_sorted[3][0]}   {stats.languages_sorted[3][1]} %            │
-│    │                                                                 ││    {stats.languages_sorted[4][0]}   {stats.languages_sorted[4][1]} %            │
-│    │                                                                 ││    {stats.languages_sorted[5][0]}   {stats.languages_sorted[5][1]} %            │
+│    │                                     │SWP:  0%   0.0GiB/8.8GiB  │││    {stats.languages_sorted[0][0]}   {stats.languages_sorted[0][1]}              │
+│    │                                     └──────────────────────────┘││    {stats.languages_sorted[1][0]}   {stats.languages_sorted[1][1]}              │
+│    │                                                                 ││    {stats.languages_sorted[2][0]}   {stats.languages_sorted[2][1]}              │
+│    │                                                                 ││    {stats.languages_sorted[3][0]}   {stats.languages_sorted[3][1]}              │
+│    │                                                                 ││    {stats.languages_sorted[4][0]}   {stats.languages_sorted[4][1]}              │
+│    │                                                                 ││    {stats.languages_sorted[5][0]}   {stats.languages_sorted[5][1]}              │
 │    │                                                                 ││                                                   │
 │    │                                                                 │└───────────────────────────────────────────────────┘
 │    │                                                                 │┌ Stats ────────────────────────────────────────────┐
@@ -96,7 +137,7 @@ def main():
 └─────────────────────────────────────────────────────────────┘└────────────────────────────────────────────────────────────┘
     """
 
-    monaLines1 = f"""
+    bottom1 = f"""
 ┌ CPU ─ 1.04 0.71 0.50 ────────────────────────────────────────────────────────────────────────────────────┐┌───────────────┐
 │100%│                                                                                                     ││\x1b[36mCPU     Use    \x1b[0m│
 │    │                                                                                                     ││               │
@@ -155,7 +196,7 @@ def main():
 └─────────────────────────────────────────────────────────────┘└────────────────────────────────────────────────────────────┘
     """
 
-    monaLines2 = f"""
+    bottom2 = f"""
 ┌ CPU ─ 1.04 0.71 0.50 ────────────────────────────────────────────────────────────────────────────────────┐┌───────────────┐
 │100%│                                                                                                     ││\x1b[36mCPU     Use    \x1b[0m│
 │    │                                                                                                     ││               │
@@ -214,7 +255,7 @@ def main():
 └─────────────────────────────────────────────────────────────┘└────────────────────────────────────────────────────────────┘
     """
 
-    monaLines3 = f"""
+    bottom3 = f"""
 ┌ CPU ─ 1.04 0.71 0.50 ────────────────────────────────────────────────────────────────────────────────────┐┌───────────────┐
 │100%│\x1b[31m            ⢠⠋⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠒⠤⣀               \x1b[0m││\x1b[36mCPU     Use    \x1b[0m│
 │    │\x1b[31m           ⢠⠃                                                                         ⠑⠢⢄⡀           \x1b[0m││               │
@@ -274,11 +315,11 @@ def main():
     """
 
     # Loop over Bottom command
-    for x in range(10):
-        t.gen_text(monaLines0, 10, count=30)
-        t.gen_text(monaLines1, 10, count=30)
-        t.gen_text(monaLines2, 10, count=30)
-        t.gen_text(monaLines3, 10, count=30)
+    for x in range(1):
+        t.gen_text(bottom0, 10, count=30)
+        t.gen_text(bottom1, 10, count=30)
+        t.gen_text(bottom2, 10, count=30)
+        t.gen_text(bottom3, 10, count=30)
 
     t.toggle_show_cursor(True)
 

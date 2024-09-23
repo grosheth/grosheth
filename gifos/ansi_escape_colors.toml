@@ -13,7 +13,7 @@
         blue= "#4ca6e8"
         magenta = "#9d81ba"
         cyan = "#6bd9db"
-        white = "#e4e6e7"
+        white = "#e6e6e8"
 
         [kaolin.bright_colors]
         black = "#2c2e2f"
