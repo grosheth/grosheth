@@ -32,7 +32,7 @@ def main():
     stats = get_stats()
     stats = string_format(stats)
 
-    t.gen_text(text="\x1b[37m\x1b[0m \x1b[31mnixos\x1b[0m \x1b[33msalledelavage\x1b[0m \x1b[32m ~\x1b[0m ............................ \x1b[35m12ms\x1b[0m \x1b[34m󰔟 09-20 10:36\x1b\n\x1b[32m❯\x1b[0m", row_num=10, contin=False)
+    # t.gen_text(text="\x1b[37m\x1b[0m \x1b[31mnixos\x1b[0m \x1b[33msalledelavage\x1b[0m \x1b[32m ~\x1b[0m ............................ \x1b[35m12ms\x1b[0m \x1b[34m󰔟 09-20 10:36\x1b\n\x1b[32m❯\x1b[0m", row_num=10, contin=False)
 
     t.set_font(FONT_FILE_BITMAP, 16, 0)
     t.toggle_show_cursor(False)
@@ -274,13 +274,13 @@ def main():
     """
 
     # Loop over Bottom command
-    # for x in range(10):
-    #     t.gen_text(monaLines0, 10, count=30)
-    #     t.gen_text(monaLines1, 10, count=30)
-    #     t.gen_text(monaLines2, 10, count=30)
-    #     t.gen_text(monaLines3, 10, count=30)
-    #
-    # t.toggle_show_cursor(True)
+    for x in range(10):
+        t.gen_text(monaLines0, 10, count=30)
+        t.gen_text(monaLines1, 10, count=30)
+        t.gen_text(monaLines2, 10, count=30)
+        t.gen_text(monaLines3, 10, count=30)
+
+    t.toggle_show_cursor(True)
 
     t.gen_gif()
 
