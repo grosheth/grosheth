@@ -325,13 +325,14 @@ def main():
     """
 
     # Loop over Bottom command
-    for x in range(1):
+    for x in range(2):
         t.gen_text(bottom0, 10, count=30)
         t.gen_text(bottom1, 10, count=30)
         t.gen_text(bottom2, 10, count=30)
         t.gen_text(bottom3, 10, count=30)
 
     t.toggle_show_cursor(True)
+
 
     t.gen_gif()
 
