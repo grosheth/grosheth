@@ -5,8 +5,7 @@ from zoneinfo import ZoneInfo
 FONT_FILE_BITMAP = "./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf"
 
 nitch = f"""
-\x1b[36m
-   _  ___      ____  ____
+ \x1b[36m  _  ___      ____  ____
   / |/ (_)_ __/ __ \/ __/
  /    / /\ \ / /_/ /\ \ 
 /_/|_/_//_\_\\\\____/___/ 
@@ -56,23 +55,34 @@ def shell(row, delay=0, contin=False, save=True):
     time_now = datetime.now(ZoneInfo("America/Toronto")).strftime(
         "%a %b %d %I:%M:%S %Y"
     )
-    t.gen_text(text=nitch, row_num=1, contin=False)
-    t.gen_text(text=f"\x1b[37m \x1b[0m \x1b[31mnixos\x1b[0m \x1b[33msalledelavage\x1b[0m \x1b[32m ~\x1b[0m ................................................................... \x1b[35m12ms\x1b[0m \x1b[34m󰔟 {time_now}\x1b[0m", row_num=20, contin=False)
-    t.gen_text(text=f"\x1b[32m❯ \x1b[0m", row_num=21, contin=False)
+    t.gen_text(text=f"\x1b[37m \x1b[0m \x1b[31mnixos\x1b[0m \x1b[33msalledelavage\x1b[0m \x1b[32m ~\x1b[0m ................................................................... \x1b[35m12ms\x1b[0m \x1b[34m󰔟 {time_now}\x1b[0m", row_num=row, contin=False)
+    t.gen_text(text=f"\x1b[32m❯ \x1b[0m", row_num=row+1, contin=False)
     t.clone_frame(20)
     if save:
         t.save_frame(base_file_name=f"frame_{row}")
 
 def main():
 
-    t.set_font(FONT_FILE_BITMAP, 16)
     # Obtain stats from Github
     stats = get_stats()
     stats = string_format(stats)
 
 
+    t.set_font(FONT_FILE_BITMAP, 16)
     shell(1)
-    t.gen_typing_text("btm", 21, contin=True)
+    col = t.curr_col
+    t.gen_typing_text("\x1b[31mnitc", 2, contin=True)
+    t.delete_row(2, col)
+    t.gen_text("\x1b[32mnitch\x1b[0m", 2, contin=True)
+    t.clone_frame(5)
+    t.gen_text(text=nitch, row_num=3, contin=True)
+
+    shell(22)
+    col = t.curr_col
+    t.gen_typing_text("\x1b[31mbt", 23, contin=True)
+    t.delete_row(23, col)
+    t.gen_text("\x1b[32mbtm\x1b[0m", 23, contin=True)
+    t.clone_frame(10)
     t.clear_frame()
 
     t.set_font(FONT_FILE_BITMAP, 16, 0)
