@@ -1,0 +1,19 @@
+on:
+  schedule:
+  - cron: "0 2 * * 1-5"
+
+jobs:
+  update_readme:
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - run: python terminal.py
+
+    - name: Update to git
+      run: |
+        git config --global user.name 'Salledelavage'
+        git config --global user.email 'salledelavager@gmail.com'
+        git commit -am "Updating Readme on: ${TIME}"
+        git push

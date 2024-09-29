@@ -38,7 +38,6 @@ def string_format(stats):
     for x, lang in enumerate(stats.languages_sorted):
         stats.languages_sorted[x] = list(stats.languages_sorted[x])
         stats.languages_sorted[x][0] = "{:<25}".format(lang[0])
-        stats.languages_sorted[x][1] = str(stats.languages_sorted[x][1]) + "%"
         stats.languages_sorted[x][1] = "{:<5}".format(lang[1])
 
     # Set length of strings so that btm stays the same size even when stats change
