@@ -30,10 +30,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           USERNAME: ${{ secrets.USERNAME }}
 
+      - name: set commit time
+        run: DATE=$(date)
+
       - name: Update to git
         run: |
           git config --global user.name 'Salledelavage'
           git config --global user.email 'salledelavager@gmail.com'
           git add --all
-          git commit -m "Updating Readme on: ${TIME}"
+          git commit -m "Updating Readme on: ${DATE}"
           git push
