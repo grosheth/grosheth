@@ -1,19 +1,28 @@
+name: run terminal.py
+
 on:
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
   schedule:
-  - cron: "0 2 * * 1-5"
+  - cron: "0 10 * * *"
 
 jobs:
-  update_readme:
+  update-readme:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-    - run: python terminal.py
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-    - name: Update to git
-      run: |
-        git config --global user.name 'Salledelavage'
-        git config --global user.email 'salledelavager@gmail.com'
-        git commit -am "Updating Readme on: ${TIME}"
-        git push
+      - run: pip install -r requirements.txt
+      - run: python terminal.py
+
+      - name: Update to git
+        run: |
+          git config --global user.name 'Salledelavage'
+          git config --global user.email 'salledelavager@gmail.com'
+          git commit -am "Updating Readme on: ${TIME}"
+          git push
