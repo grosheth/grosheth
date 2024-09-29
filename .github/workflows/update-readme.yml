@@ -30,13 +30,23 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           USERNAME: ${{ secrets.USERNAME }}
 
-      - name: set commit time
-        run: DATE=$(date)
+      - name: Get current time
+        uses: josStorer/get-current-time@v2
+        id: current-time
+        with:
+          format: YYYYMMDD-HH
+          utcOffset: "+05:00"
 
       - name: Update to git
         run: |
           git config --global user.name 'Salledelavage'
           git config --global user.email 'salledelavager@gmail.com'
           git add --all
-          git commit -m "Updating Readme on: ${DATE}"
+          git commit -m "Updating Readme on: $TIME $R_TIME $F_TIME $YEAR $DAY"
           git push
+        env:
+          TIME: "${{ steps.current-time.outputs.time }}"
+          R_TIME: "${{ steps.current-time.outputs.readableTime }}"
+          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
+          YEAR: "${{ steps.current-time.outputs.year }}"
+          DAY: "${{ steps.current-time.outputs.day }}"
