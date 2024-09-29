@@ -42,7 +42,7 @@ jobs:
           git config --global user.name 'Salledelavage'
           git config --global user.email 'salledelavager@gmail.com'
           git add --all
-          git commit -m "Updating Readme on: $TIME $R_TIME $F_TIME $YEAR $DAY"
+          git commit -m "Updating Readme on: $F_TIME"
           git push
         env:
           TIME: "${{ steps.current-time.outputs.time }}"
