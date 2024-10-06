@@ -110,12 +110,12 @@ def main():
 ┌ Memory ──────────────────────────────────────────────────────────────┐┌ Github Languages ─────────────────────────────────┐
 │100%│                                     ┌──────────────────────────┐││\x1b[36m    Language▲                  usage%(t)           \x1b[0m│
 │    │                                     │RAM: 15%   10.9GiB/62.7GiB│││                                                   │
-│    │                                     │SWP:  0%   0.0GiB/8.8GiB  │││    {stats.languages_sorted[0][0]}   {stats.languages_sorted[0][1]} %             │
-│    │                                     └──────────────────────────┘││    {stats.languages_sorted[1][0]}   {stats.languages_sorted[1][1]} %             │
-│    │                                                                 ││    {stats.languages_sorted[2][0]}   {stats.languages_sorted[2][1]} %             │
-│    │                                                                 ││    {stats.languages_sorted[3][0]}   {stats.languages_sorted[3][1]} %             │
-│    │                                                                 ││    {stats.languages_sorted[4][0]}   {stats.languages_sorted[4][1]} %             │
-│    │                                                                 ││    {stats.languages_sorted[5][0]}   {stats.languages_sorted[5][1]} %             │
+│    │                                     │SWP:  0%   0.0GiB/8.8GiB  │││    {stats.languages_sorted[0][0]}   {stats.languages_sorted[0][1]} %            │
+│    │                                     └──────────────────────────┘││    {stats.languages_sorted[1][0]}   {stats.languages_sorted[1][1]} %            │
+│    │                                                                 ││    {stats.languages_sorted[2][0]}   {stats.languages_sorted[2][1]} %            │
+│    │                                                                 ││    {stats.languages_sorted[3][0]}   {stats.languages_sorted[3][1]} %            │
+│    │                                                                 ││    {stats.languages_sorted[4][0]}   {stats.languages_sorted[4][1]} %            │
+│    │                                                                 ││    {stats.languages_sorted[5][0]}   {stats.languages_sorted[5][1]} %            │
 │    │                                                                 ││                                                   │
 │    │                                                                 │└───────────────────────────────────────────────────┘
 │    │                                                                 │┌ Stats ────────────────────────────────────────────┐
