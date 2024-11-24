@@ -5,6 +5,7 @@ from zoneinfo import ZoneInfo
 FONT_FILE_BITMAP = "./assets/fonts/JetBrainsMonoNerdFont-Regular.ttf"
 GITHUB_TOKEN = os.getenv("TOKEN")
 
+
 nitch = f"""
  \x1b[36m  _  ___      ____  ____
   / |/ (_)_ __/ __ \/ __/
