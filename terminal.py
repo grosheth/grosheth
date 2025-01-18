@@ -43,7 +43,7 @@ def string_format(stats):
         stats.languages_sorted[x][1] = "{:<5}".format(lang[1])
 
     # Set length of strings so that btm stays the same size even when stats change
-    stats.account_name = "{:<16}".format(stats.account_name) 
+    stats.account_name = "{:<16}".format(stats.account_name)
     stats.total_commits_all_time = "{:<10}".format(stats.total_commits_all_time)
     stats.total_pull_requests_made = "{:<6}".format(stats.total_pull_requests_made)
     stats.user_rank.level = "{:<9}".format(stats.user_rank.level)
